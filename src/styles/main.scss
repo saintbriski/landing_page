@@ -1,5 +1,56 @@
-$bgColor: rgb(21, 47, 238);
+@use 'variaveis';
+@use 'header';
+
+
+
+@font-face {
+    font-family: Montserrat;
+    src: url(../../assets/fonts/Montserrat-VariableFont_wght.ttf);
+    font-weight: 400;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: Montserrat, sans-serif;
+}
 
 body {
-    background-color: $bgColor;
+    background-color: variaveis.$corDeFundo;
+}
+
+@mixin text ($fontSize: 16px) {
+    font-size: $fontSize;
+    color: variaveis.$corTextoPrincipal;
+}
+
+@mixin title ($fontSize: 35px) {
+    @include text($fontSize);
+    color: variaveis.$corTextoPrincipal;
+}
+
+.text {
+    @include text;
+}
+
+.title {
+    @include title;
+}
+
+.title--small {
+    @include title(14px);
+}
+
+.title--big {
+    @include title(18px);
+}
+
+.text--small {
+    @include text(14px);
+}
+
+.text--big {
+    @include text(17px);
 }
