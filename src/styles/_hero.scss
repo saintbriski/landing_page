@@ -1,0 +1,66 @@
+@use 'variaveis';
+
+.hero {
+    min-height: 80vh;
+    
+    position: relative;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 50%),
+                url(../images/logos/supoernatural-logo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 0;
+
+    &__content {
+        width: 610px;
+        padding: 19rem 0 0 12em;
+
+        
+        &__rate {
+            display: flex;
+            h6 {
+                margin-right: 0.5rem;
+            }
+        }
+
+        p {
+            margin: 16px 0;
+        }
+
+        &__button {
+
+            margin-top: 34px;
+
+            a {
+                text-decoration: none;
+            }
+        }
+
+        &__logo__show {
+            max-width: 322px;
+        }
+
+    }
+
+    &__logo {
+        max-width: 322px;
+        margin-bottom: 18px;
+    }
+
+    .button-hero {
+        background-color: variaveis.$corBotoes;
+            color: rgb(255, 255, 255);
+            font-style: normal;
+            font-weight: 700;
+            letter-spacing: 0;
+            border-radius: 8px;
+            border: 2px solid transparent;
+            padding: 13px 24px;
+
+            &:hover {
+                background-color: darken(variaveis.$corBotoes, 10%);
+            }
+    }
+}
+
+
+
