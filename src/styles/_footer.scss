@@ -1,0 +1,49 @@
+@use 'variaveis';
+
+.footer {
+    padding: 6vw 15vw;
+
+    &__container {
+
+        a {
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        li {
+            list-style-type: none;
+        
+        }
+        
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__links {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 18px 24px;
+    }
+
+    .btn-footer{
+        border: 2px solid transparent;
+        font-weight: 700;
+        letter-spacing: 0;
+        border-radius: 8px;
+        padding: 10px 24px;
+    
+        &:hover {
+            background-color: lighten(variaveis.$corHover, 3%);
+        }
+    }
+
+    p {
+        margin-top: 12px;
+        text-align: center;
+    }
+}

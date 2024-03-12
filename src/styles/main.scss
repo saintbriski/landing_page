@@ -2,6 +2,9 @@
 @use 'header';
 @use 'hero';
 @use 'episodes';
+@use 'show__info';
+@use 'banner';
+@use 'footer';
 
 
 
@@ -63,4 +66,8 @@ body {
 
 .text--espisodes {
     @include text(11.7px)
+}
+
+.text--footer {
+    @include text(10px);
 }
