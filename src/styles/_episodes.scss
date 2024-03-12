@@ -1,0 +1,85 @@
+    @use 'variaveis';
+
+    .episodes {
+        padding: 9vw 10vw;
+
+        &__list {
+            width: 100%;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            display: grid;
+            gap: 16px;
+
+            &__item {
+
+                img {
+                    height: 150px;
+                }
+                h6 {
+                    margin: 16px 0px 8px;
+                }
+                p {
+                    margin: 0px 0px 16px;
+                }
+            }
+        }
+
+        &__container {
+
+            .is--hiden {
+                display: none;
+            }
+            
+            h6 {
+                margin: 24px 0px 16px;
+            }
+        }
+
+        .season-selector {
+            position: relative;
+            display: inline-block;
+
+            li {
+                font-weight: bold;
+            }
+        }
+
+
+        .selected-option {
+            display: block;
+            padding: 10px 24px;
+            background-color: transparent;
+            color: rgb(255, 255, 255);
+            border-radius: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+
+            svg {
+                margin-left: 8px;
+                vertical-align: middle;
+            }
+        }
+
+        .selected-option:hover {
+            background-color: lighten(variaveis.$corHover, 3%);
+        }
+
+        .options-list {
+            display: none;
+            position: absolute;
+            width: 100%;
+            list-style-type: none;
+            background-color: rgba(64, 68, 89, 0.7);
+            border-radius: 0 0 10px 10px;
+        }
+
+        .options-list li {
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        .options-list li:hover {
+            background-color: rgba(64, 68, 89, 0.7);
+        }
+
+    }

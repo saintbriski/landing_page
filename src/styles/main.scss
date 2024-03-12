@@ -1,6 +1,7 @@
 @use 'variaveis';
 @use 'header';
 @use 'hero';
+@use 'episodes';
 
 
 
@@ -48,10 +49,18 @@ body {
     @include title(18px);
 }
 
+.title--biggest {
+    @include title (24px)
+}
+
 .text--small {
     @include text(14px);
 }
 
 .text--big {
     @include text(17px);
+}
+
+.text--espisodes {
+    @include text(11.7px)
 }
